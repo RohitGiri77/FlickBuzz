@@ -38,11 +38,9 @@ public class HorizontalListAdapter extends RecyclerView.Adapter<HorizontalListAd
 
     @Override
     public void onBindViewHolder(HorizontalViewHolder holder, int position) {
-     //   holder.cardImage.setImageResource(R.drawable.placeholder);
         holder.cardTitle.setText(titles.get(position).getTitle());
         String filteredCharacters;
         filteredCharacters = titles.get(position).getTitle();
-
         if (filteredCharacters.length() > 35) {
             Log.w("> 22", "< 35");
             holder.cardTitle.setText(filteredCharacters.substring(0, 34) + "...");
@@ -51,7 +49,6 @@ public class HorizontalListAdapter extends RecyclerView.Adapter<HorizontalListAd
             Log.w("< 22", "nolimit");
             holder.cardTitle.setText(filteredCharacters);
         }
-
         Log.e("Thumb nail ","-->> "+titles.get(position).getThumbnail_image());
         Picasso.get().load(titles.get(position).getThumbnail_image()).into(holder.cardImage);
         Picasso.get().setLoggingEnabled(true);

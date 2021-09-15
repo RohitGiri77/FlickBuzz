@@ -48,10 +48,8 @@ public class VerticalListAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
                 return false;
             }
         };
-
         HorizontalListViewHolder horizontalListViewHolder = (HorizontalListViewHolder) holder;
         horizontalListViewHolder.horizontalList.setLayoutManager(layoutManager);
-
         if (horizontalListViewHolder.horizontalList.getOnFlingListener() == null) {
             SnapHelper snapHelper = new LinearSnapHelper();
             snapHelper.attachToRecyclerView(horizontalListViewHolder.horizontalList);

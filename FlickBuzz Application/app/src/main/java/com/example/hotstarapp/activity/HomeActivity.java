@@ -47,10 +47,10 @@ public class HomeActivity extends AppCompatActivity {
         try {
             jsonObject = new JSONObject(formattion);
             response = jsonObject.getString("response");
-            Log.e("JSONOBJ ","-->> "+response);
-            home_content = StaticValues.getReq2(response,"home_content");
+            Log.e("JSONOBJ ", "-->> " + response);
+            home_content = StaticValues.getReq2(response, "home_content");
             jsonArray = new JSONArray(home_content);
-            for(int js = 0 ; js < jsonArray.length() ; js++){
+            for (int js = 0; js < jsonArray.length(); js++) {
                 Item item = new Item();
                 ArrayList<Title> titles = new ArrayList<>();
                 dataJsonObj = jsonArray.getJSONObject(js);
@@ -61,17 +61,12 @@ public class HomeActivity extends AppCompatActivity {
                 item.setTitles(titles);
                 items.add(item);
             }
-
-            Log.e("home_content","-->> "+home_content);
+            Log.e("home_content", "-->> " + home_content);
         } catch (JSONException e) {
             e.printStackTrace();
         }
-
         String arrayListToString = Converter.convertItemsToJson(items);
-
-        Log.e("Formattion ","Formattion "+arrayListToString);
-
-
+        Log.e("Formattion ", "Formattion " + arrayListToString);
         RecyclerView verticalRecycler = findViewById(R.id.verticalRecycler);
         verticalRecycler.setAdapter(new VerticalListAdapter(activity, items));
 

@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Hotstar-master.iml" filepath="$PROJECT_DIR$/.idea/modules/Hotstar-master.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Hotstar-master.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Hotstar-master.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/FlickBuzz_Application.iml" filepath="$PROJECT_DIR$/.idea/modules/FlickBuzz_Application.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/FlickBuzz_Application.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/FlickBuzz_Application.app.iml" />
     </modules>
   </component>
 </project>

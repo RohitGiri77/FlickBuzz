@@ -3,14 +3,11 @@ package com.example.hotstarapp.activity;
 import java.util.ArrayList;
 
 public class Item {
-
-
     private String category_name;
     private ArrayList<Title> titles = new ArrayList<>();
 
     public Item() {
     }
-
 
     public String getCategory_name() {
         return category_name;
